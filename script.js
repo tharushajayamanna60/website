@@ -1,4 +1,3 @@
-// Load JSON and create navigation dynamically
 fetch('pages.json')
     .then(response => response.json())
     .then(pages => {
@@ -13,8 +12,7 @@ fetch('pages.json')
             });
             navbar.appendChild(btn);
 
-            // Load first page by default
-            if(index === 0) {
+            if(index === 0) {  // first page loaded by default
                 iframe.src = page.url;
             }
         });
